@@ -779,7 +779,7 @@ Class cellContVClass()
 
 - (void)setSingleLineAutoResizeWithMaxWidth:(CGFloat)maxWidth
 {
-    self.sd_maxWidth = @(maxWidth);
+    self.sd_maxWidth = @(ceil(maxWidth));
 }
 
 - (void)setMaxNumberOfLinesToShow:(NSInteger)lineCount
@@ -1738,7 +1738,7 @@ Class cellContVClass()
 - (void)setWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = ceil(width);
     self.frame = frame;
 }
 
